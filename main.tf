@@ -17,5 +17,5 @@ terraform {
 
 resource "local_file" "exemple" {
   filename = "exemple1.txt"
-  content = "Hello Full!"
+  content = var.file_content
 }
