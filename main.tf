@@ -16,5 +16,5 @@ terraform {
 
 resource "local_file" "exemple" {
   filename = "created_file.txt"
-  content = "Minha idade é: ${var.file_content}"
+  content = "Meu nome é: ${var.new_value_content} e minha idade é: ${var.file_content} anos."
 }
