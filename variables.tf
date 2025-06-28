@@ -24,3 +24,23 @@ variable "person_map" {
     "cidade" = "São Paulo"
   }
 }
+
+## tuple -> São coleções de valores que podem ser de qualquer tipo
+variable "person_tuple" {
+  type    = tuple([string, number])
+  default = ["Fabiana", 28]
+}
+
+
+## Neste caso, a estrutura definida do objeto torna-se obrigatóra e deve-se respeitar tal estrutura.
+variable "person_object" {
+  type    = object({
+    name  = string
+    idade = number
+  })
+
+  default = {
+    name  = "Fabiana"
+    idade = 28
+  }
+}

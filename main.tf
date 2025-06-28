@@ -22,10 +22,10 @@ ${var.fruits[1]} é a fruta que eu mais gosto.
 ${var.fruits[2]} é a fruta que eu menos gosto.
 
 Frutas de acordo com a aula:
-${tolist(var.fruits) [1]}
+${tolist(var.fruits)[1]}
 
-Nome: ${var.person_map.name}
-Idade: ${var.person_map.idade}
+Nome: ${var.person_tuple[0]}
+Idade: ${var.person_tuple[1]}
 Cidade: ${var.person_map.cidade}
 
 EOF
