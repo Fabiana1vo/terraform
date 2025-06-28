@@ -1,3 +1,5 @@
 variable "file_content" {
-  default = "Esse é um valor padrão"
+  default = 10
+  description = "Essa variavel representa o valor a ser salvo no arquivo"
+  type = number
 }
