@@ -3,7 +3,7 @@
 terraform {
   required_providers {
     local = {
-      source = "hashicorp/local"
+      source  = "hashicorp/local"
       version = " ~> 2.1"
     }
   }
@@ -16,5 +16,12 @@ terraform {
 
 resource "local_file" "exemple" {
   filename = "created_file.txt"
-  content = "Meu nome é: ${var.new_value_content} e minha idade é: ${var.file_content} anos."
+  content  = <<EOF
+${var.fruits[0]} é a minha fruta favorita.  
+${var.fruits[1]} é a fruta que eu mais gosto.
+${var.fruits[2]} é a fruta que eu menos gosto.
+
+Frutas de acordo com a aula:
+${tolist(var.fruits) [1]}
+EOF
 }

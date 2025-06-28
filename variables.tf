@@ -9,3 +9,10 @@ variable "new_value_content" {
   description = "Essa variavel representa o valor a ser salvo no arquivo"
   type = string
 }
+
+variable "fruits" {
+  default = ["banana", "maçã", "laranja"]
+  description = "Essa variavel representa uma lista de frutas"
+  type = list(string)
+  
+}

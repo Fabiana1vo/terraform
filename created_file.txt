@@ -1,1 +1,3 @@
-Minha idade é: 11
+banana é a minha fruta favorita.  
+maçã é a fruta que eu mais gosto.
+laranja é a fruta que eu menos gosto.
