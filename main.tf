@@ -1,6 +1,5 @@
 # Usa-se a linguagem hcl
 
-
 terraform {
   required_providers {
     local = {
@@ -16,6 +15,6 @@ terraform {
 // 'name' = identificador do arquivo 
 
 resource "local_file" "exemple" {
-  filename = "exemple1.txt"
-  content = var.file_content
+  filename = "created_file.txt"
+  content = "Minha idade é: ${var.file_content}"
 }
