@@ -21,6 +21,9 @@ ${var.fruits[0]} é a minha fruta favorita.
 ${var.fruits[1]} é a fruta que eu mais gosto.
 ${var.fruits[2]} é a fruta que eu menos gosto.
 
+
+Conteúdo do arquivo: ${var.file_content}
+
 Frutas de acordo com a aula:
 ${tolist(var.fruits)[1]}
 

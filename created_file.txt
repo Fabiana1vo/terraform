@@ -6,6 +6,6 @@ Frutas de acordo com a aula:
 maçã
 
 Nome: Fabiana
-Idade: 25
+Idade: 28
 Cidade: São Paulo
 
