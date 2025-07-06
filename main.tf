@@ -15,28 +15,9 @@ terraform {
 }
 
 
-
-//'local_file = provider'
-// 'name' = identificador do arquivo 
-
-resource "local_file" "exemple" {
-  filename = "created_file.txt"
-  content  = <<EOF
-${var.fruits[0]} é a minha fruta favorita.  
-${var.fruits[1]} é a fruta que eu mais gosto.
-${var.fruits[2]} é a fruta que eu menos gosto.
-Conteúdo do arquivo: ${var.file_content}
-
-Meu pet: ${random_pet.meu_pet.id}
-Frutas de acordo com a aula:
-${tolist(var.fruits)[1]}
-
-Nome: ${var.person_tuple[0]}
-Idade: ${var.person_tuple[1]}
-Cidade: ${var.person_map.cidade}
-EOF
+data "local_file" "external_source" {
+  filename = "datasource.txt"
 }
-
 
 
 # Criando um novo resource para utilizar com o random provider
@@ -56,3 +37,29 @@ output "name_my_pet" {
 output "my_name" {
   value = "Fabiana Ivo Souza"
 }
+
+
+//'local_file = provider'
+// 'name' = identificador do arquivo 
+
+resource "local_file" "exemple" {
+  filename = "created_file.txt"
+  content  = <<EOF
+${var.fruits[0]} é a minha fruta favorita.  
+${var.fruits[1]} é a fruta que eu mais gosto.
+${var.fruits[2]} é a fruta que eu menos gosto.
+Conteúdo do arquivo: ${var.file_content}
+Conteúdo vindo de um data source: ${data.local_file.external_source.content}
+
+
+
+Meu pet: ${random_pet.meu_pet.id}
+Frutas de acordo com a aula:
+${tolist(var.fruits)[1]}
+
+Nome: ${var.person_tuple[0]}
+Idade: ${var.person_tuple[1]}
+Cidade: ${var.person_map.cidade}
+EOF
+}
+
