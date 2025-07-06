@@ -1,11 +1,10 @@
 banana é a minha fruta favorita.  
 maçã é a fruta que eu mais gosto.
 laranja é a fruta que eu menos gosto.
-
+Conteúdo do arquivo: valor vindo do arquivo variables.auto.tfvars
 Frutas de acordo com a aula:
 maçã
 
 Nome: Fabiana
 Idade: 28
 Cidade: São Paulo
-
