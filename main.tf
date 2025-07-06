@@ -46,3 +46,13 @@ resource "random_pet" "meu_pet" {
   prefix    = "Sr."
   separator = " "
 }
+
+
+#Expõe determinado valor quando usamos o comando terraform apply 
+# Isso é usado atribuir um ip de forma dinamica. Após a criação da vm ele pega e mostra o ip da vm criada
+output "name_my_pet" {
+  value = random_pet.meu_pet.id
+}
+output "my_name" {
+  value = "Fabiana Ivo Souza"
+}
